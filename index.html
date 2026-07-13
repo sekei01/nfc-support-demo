@@ -143,19 +143,14 @@
         </div>
 
         <!-- 製品情報 -->
-        <section
-          class="card border-0 bg-light mb-4"
-          aria-labelledby="product-information-title"
-        >
-          <div class="card-body">
-
-            <h2
-              id="product-information-title"
-              class="h6 text-secondary mb-3"
-            >
-              製品情報
-            </h2>
-
+        <details class="product-info-panel mb-3">
+        
+          <summary class="product-info-summary">
+            製品情報
+          </summary>
+        
+          <div class="product-info-content">
+        
             <table class="table table-sm align-middle mb-0">
               <tbody>
                 <tr>
@@ -166,7 +161,7 @@
                     ABC-123
                   </td>
                 </tr>
-
+        
                 <tr>
                   <th scope="row">
                     製造番号
@@ -175,7 +170,7 @@
                     2026-001234
                   </td>
                 </tr>
-
+        
                 <tr>
                   <th scope="row">
                     設置日
@@ -184,7 +179,7 @@
                     2026年7月15日
                   </td>
                 </tr>
-
+        
                 <tr>
                   <th scope="row">
                     保証状況
@@ -197,13 +192,14 @@
                 </tr>
               </tbody>
             </table>
-
+        
             <p class="text-secondary small mt-3 mb-0">
               ※上記の製品情報は原理試作用のサンプル表示です。
             </p>
-
+        
           </div>
-        </section>
+        
+        </details>
 
         <h2 class="h5 mb-3">
           何にお困りですか？
