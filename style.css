@@ -1,25 +1,132 @@
+:root {
+  --brand-navy: #001e54;
+  --brand-lime: #d2d300;
+  --brand-pink: #da0048;
+  --brand-bg: #f5f6f8;
+  --brand-text: #1f2933;
+  --brand-border: #d9dee7;
+}
+
 body {
-  background-color: #f7f7f7;
+  margin: 0;
+  background-color: var(--brand-bg);
+  color: var(--brand-text);
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    Meiryo,
+    sans-serif;
 }
 
 .support-container {
   max-width: 520px;
 }
 
+.site-header {
+  background-color: #ffffff;
+  border-bottom: 4px solid var(--brand-lime);
+}
+
+.brand-logo {
+  display: block;
+  width: 150px;
+  height: auto;
+}
+
+.demo-banner,
+.demo-label {
+  padding: 9px 14px;
+  color: var(--brand-navy);
+  background-color: #f7f8d7;
+  border-left: 5px solid var(--brand-lime);
+  border-radius: 4px;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
 .main-card {
-  border-radius: 20px;
+  border: 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.main-card .card-body {
+  border-top: 5px solid var(--brand-navy);
+}
+
+.page-eyebrow {
+  color: var(--brand-pink);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
 }
 
 .menu-button {
   min-height: 64px;
-  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 16px;
+  border-radius: 5px;
+  font-size: 1rem;
   font-weight: 600;
-  border-radius: 14px;
 }
 
-.demo-label {
-  font-size: 0.85rem;
+.brand-button-primary {
+  color: #ffffff;
+  background-color: var(--brand-navy);
+  border: 2px solid var(--brand-navy);
 }
+
+.brand-button-primary:hover,
+.brand-button-primary:focus {
+  color: #ffffff;
+  background-color: #001641;
+  border-color: #001641;
+}
+
+.brand-button-secondary {
+  color: var(--brand-navy);
+  background-color: var(--brand-lime);
+  border: 2px solid var(--brand-lime);
+}
+
+.brand-button-secondary:hover,
+.brand-button-secondary:focus {
+  color: var(--brand-navy);
+  background-color: #c3c400;
+  border-color: #c3c400;
+}
+
+.brand-button-outline {
+  color: var(--brand-navy);
+  background-color: #ffffff;
+  border: 2px solid var(--brand-navy);
+}
+
+.brand-button-outline:hover,
+.brand-button-outline:focus {
+  color: #ffffff;
+  background-color: var(--brand-navy);
+}
+
+.brand-button-dark {
+  color: #ffffff;
+  background-color: #4a5260;
+  border: 2px solid #4a5260;
+}
+
+.brand-button-dark:hover,
+.brand-button-dark:focus {
+  color: #ffffff;
+  background-color: #353b45;
+  border-color: #353b45;
+}
+
+/* LED表示 */
 
 .led {
   display: inline-block;
@@ -29,6 +136,7 @@ body {
   margin-right: 12px;
   border: 2px solid rgba(0, 0, 0, 0.15);
   vertical-align: middle;
+  flex-shrink: 0;
 }
 
 .led-red {
@@ -48,24 +156,28 @@ body {
 }
 
 @keyframes blink-animation {
-  0%, 49% {
+  0%,
+  49% {
     opacity: 1;
   }
 
-  50%, 100% {
+  50%,
+  100% {
     opacity: 0.15;
   }
 }
 
+/* LED状態選択・説明 */
+
 .status-button {
   min-height: 72px;
   font-size: 1rem;
-  border-radius: 14px;
+  border-radius: 8px;
 }
 
 .status-panel {
-  border: 1px solid #dee2e6;
-  border-radius: 14px;
+  border: 1px solid var(--brand-border);
+  border-radius: 8px;
   background-color: #ffffff;
   overflow: hidden;
 }
@@ -88,6 +200,7 @@ body {
 .status-summary::after {
   content: "＋";
   margin-left: auto;
+  padding-left: 12px;
   font-size: 1.4rem;
 }
 
@@ -112,13 +225,14 @@ body {
 
 .status-content {
   padding: 18px;
-  border-top: 1px solid #dee2e6;
+  border-top: 1px solid var(--brand-border);
 }
 
 .dual-led {
   display: inline-flex;
   align-items: center;
   margin-right: 12px;
+  flex-shrink: 0;
 }
 
 .dual-led .led {
@@ -134,21 +248,25 @@ body {
 }
 
 @keyframes alternate-red {
-  0%, 49% {
+  0%,
+  49% {
     opacity: 1;
   }
 
-  50%, 100% {
+  50%,
+  100% {
     opacity: 0.15;
   }
 }
 
 @keyframes alternate-green {
-  0%, 49% {
+  0%,
+  49% {
     opacity: 0.15;
   }
 
-  50%, 100% {
+  50%,
+  100% {
     opacity: 1;
   }
 }
